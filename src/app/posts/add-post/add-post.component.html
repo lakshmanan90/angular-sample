@@ -1,0 +1,31 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <label>
+    USERID :
+  </label>
+  <input type="text" formControlName="userId" placeholder="userId"><br>
+  <div *ngIf="submitted && s.userId.errors" class="invalid-feedback">
+    <div *ngIf="s.userId.errors.required">UserID is required</div>
+  </div>
+  <label>
+    ID :
+  </label>
+  <input type="text" formControlName="id" placeholder="id"><br>
+  <div *ngIf="submitted && s.id.errors" class="invalid-feedback">
+    <div *ngIf="s.id.errors.required">Id is required</div>
+  </div>
+  <label>
+    TITLE :
+  </label>
+  <input type="text" formControlName="title" placeholder="title"><br>
+  <div *ngIf="submitted && s.title.errors" class="invalid-feedback">
+    <div *ngIf="s.title.errors.required">Title is required</div>
+  </div>
+  <label>
+    BODY :
+  </label>
+  <input type="text" formControlName="body" placeholder="body"><br>
+  <div *ngIf="submitted && s.body.errors" class="invalid-feedback">
+    <div *ngIf="s.body.errors.required">Body is required</div>
+  </div>
+  <button class="btn btn-primary">Add</button>
+</form>

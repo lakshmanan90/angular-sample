@@ -1,0 +1,19 @@
+<br><hr>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <label>UserName</label><br>
+  <input type="text" formControlName="userName"/><br>
+  <div *ngIf="submitted && f.userName.errors">
+    <div *ngIf="f.userName.errors.required">Please enter Your UserName</div>
+  </div><br>
+  <label>Password</label><br>
+  <input type="password" formControlName="passWord"/><br>
+  <div *ngIf="submitted && f.passWord.errors">
+      <div *ngIf="f.passWord.errors.required">Please enter Your Password</div>
+    </div><br>
+  <label>Confirm Password</label><br>
+  <input type="password" formControlName="cnfPass"/><br>
+  <div *ngIf="submitted && f.cnfPass.errors">
+      <div *ngIf="f.cnfPass.errors.required">Please enter Your Confirm Password</div>
+    </div><br>
+    <button class="btn btn-primary">Register</button>
+</form>

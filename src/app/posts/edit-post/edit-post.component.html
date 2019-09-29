@@ -1,0 +1,21 @@
+<div *ngIf="editList">
+<form  [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  <label>
+    USERID :
+  </label>
+  <input type="text" formControlName="userId" placeholder="userId"><br>
+    <label>
+    ID :
+  </label>
+  <input type="text" formControlName="id" placeholder="id"><br>
+    <label>
+    TITLE :
+  </label>
+  <input type="text" formControlName="title" placeholder="title"><br>
+    <label>
+    BODY :
+  </label>
+  <input type="text" formControlName="body" placeholder="body"><br>
+  <button class="btn btn-primary">UPDATE</button>
+  </form>
+</div>

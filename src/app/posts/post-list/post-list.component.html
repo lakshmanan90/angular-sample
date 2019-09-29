@@ -1,0 +1,24 @@
+<br>
+<div>
+  <a routerLink="addPost">AddPost</a>
+</div>
+<hr>
+
+    <input type="text" name="search" [(ngModel)]="search" placeholder="Please search the title">
+<table  border="2px">
+  <th>S.No</th>
+  <th>UserId</th>
+  <th>Id</th>
+  <th>Title</th>
+  <th>Body</th>
+  <tr *ngFor="let post of postList  ; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{post.userId}}</td>
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.body}}</td>
+    <td><button routerLink="editPost/{{post.id}}">Edit</button></td>
+    <td><button (click)="deletePost(post.id)">Delete</button></td>
+  </tr>
+</table>
+<router-outlet></router-outlet>

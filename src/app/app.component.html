@@ -1,0 +1,9 @@
+<nav>
+  <a routerLink="home">Home</a>
+  <a routerLink="postList">Posts</a>
+  <a routerLink="albumList">Albums</a>
+  <a *ngIf="!isLoggedIn" style="float: right " routerLink="register">Register</a>
+  <a *ngIf="isLoggedIn" style="float: right " routerLink="LogOut" (click)="LogOut()">Logout</a>
+  
+</nav>
+<router-outlet></router-outlet>
